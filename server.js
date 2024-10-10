@@ -13,12 +13,13 @@ let router = require('./app/routers/router.js');
 
 // Configuración de CORS
 const cors = require('cors');
-const allowedOrigins = ['http://localhost:8080', 'https://frontusuarios-3.onrender.com']; 
+const allowedOrigins = ['http://localhost:3000', 'https://frontusuarios-3.onrender.com']; 
 app.use(cors({
   origin: function (origin, callback) {
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
+
       callback(new Error('Not allowed by CORS'));
     }
   }
