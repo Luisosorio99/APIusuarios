@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 const db = require('./app/config/db.config.js');
 
 // Sincronizar la base de datos
-db.sequelize.sync({force: true}).then(() => {
+db.sequelize.sync({force: false}).then(() => {
   console.log('Drop and Resync with { force: true }');
 });
 
