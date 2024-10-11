@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 
 // Crear el servidor
 const PORT = process.env.PORT || 8080;
-const server = app.listen(PORT, function () {
+const server = app.listen(PORT, '0.0.0.0', function () {
   let host = server.address().address;
   let port = server.address().port;
   console.log("App listening at http://%s:%s", host, port);
